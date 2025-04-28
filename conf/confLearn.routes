@@ -1,0 +1,3 @@
+GET     /horlicks   controllers.LearnConfigController.getHorlicks()
+GET     /store/all   controllers.LearnConfigController.getAllAvailableGroceryItems()
+
