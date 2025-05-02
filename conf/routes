@@ -20,6 +20,7 @@ GET     /userInfo/:username     controllers.RoutesPractices.user(username:String
 # To tell the routes file, use different routes file with specific prefix 
 ->      /api/admin              admin.Routes
 ->      /confs                  confLearn.Routes
+->      /store                  actionPrac.Routes
 ->      /assets                 myAssets.Routes
 
 

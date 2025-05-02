@@ -1,0 +1,8 @@
+GET     /           controllers.ActionsPractices.welcome()
+GET     /elec       controllers.ActionsPractices.Electronics()
+GET     /furniture  controllers.ActionsPractices.Furniture()
+
+POST    /elec/check      controllers.ActionsPractices.checkItemExists()
+
+
+#GET    /todo       controllers.ActionsPractices.notImplemented()
