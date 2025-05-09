@@ -6,7 +6,6 @@ import play.api.mvc.AbstractController
 import play.api.mvc.Request
 import play.api.mvc.AnyContent
 import play.api.libs.json.Format
-import com.typesafe.sslconfig.ssl.FakeChainedKeyStore.User
 import play.api.libs.json.Json
 
 @javax.inject.Singleton

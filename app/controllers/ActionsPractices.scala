@@ -58,7 +58,7 @@ class ActionsPractices @Inject() (controllerComponents: ControllerComponents)
     {
       Future {
         val data = req.body.validate[ElectronicItem]
-        data match
+        data match{
           case JsSuccess(value, _) => {
             println(s"value: $value")
             val items = List("Mobile", "Laptop", "Computers")
@@ -67,9 +67,10 @@ class ActionsPractices @Inject() (controllerComponents: ControllerComponents)
             } else {
               NotFound("Item not found!")
             }
-
+            
           }
           case JsError(errors) => BadRequest("check the Json Body")
+        }
 
       }
     }

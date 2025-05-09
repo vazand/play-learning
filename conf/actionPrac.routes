@@ -4,5 +4,6 @@ GET     /furniture  controllers.ActionsPractices.Furniture()
 
 POST    /elec/check      controllers.ActionsPractices.checkItemExists()
 
+GET     /elec/mobiles    controllers.TwirlPractices.mobiles()
 
 #GET    /todo       controllers.ActionsPractices.notImplemented()

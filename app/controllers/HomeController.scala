@@ -20,6 +20,7 @@ class HomeController @Inject() (val controllerComponents: ControllerComponents)
     */
   def index() = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.index())
+    
   }
 
   def users() = Action { implicit request: Request[AnyContent] =>
