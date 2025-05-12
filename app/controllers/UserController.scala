@@ -5,6 +5,10 @@ import scala.concurrent.ExecutionContext
 import models.UserRepository
 import play.api.libs.json.Json
 import scala.concurrent.Future
+import scala.concurrent.Await
+import scala.concurrent.duration.Duration
+import java.util.ArrayList
+import play.api.libs.json.JsArray
 
 
 @Singleton
@@ -13,8 +17,10 @@ class UserController @Inject()(cc: ControllerComponents, userRepo: UserRepositor
 
   implicit val ec: ExecutionContext = cc.executionContext
 
-  def listUsers = Action.async {
-    userRepo.all().map(users => Ok(Json.toJson(users)))
+  def listUsers = Action {
+    val data = (Await.result(userRepo.all(),Duration.Inf)).map(x => Json.toJson(x))
+    val jsArr = JsArray(data)
+    Ok(jsArr)
   }
 
   def getUser(id: Long) = Action.async {

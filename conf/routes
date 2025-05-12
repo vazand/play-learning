@@ -18,7 +18,7 @@ GET     /userInfo/:username     controllers.RoutesPractices.user(username:String
 ->      /api/users              users.Routes
 ->      /api/admin              admin.Routes
 ->      /confs                  confLearn.Routes
-->      /form                   myFormPrac.Routes
+# ->      /form                   myFormPrac.Routes
 ->      /store                  actionPrac.Routes
 ->      /assets                 myAssets.Routes
 

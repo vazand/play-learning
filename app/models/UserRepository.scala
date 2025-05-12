@@ -24,8 +24,10 @@ class UserRepository @Inject()(protected val dbConfigProvider: DatabaseConfigPro
   }
 
   def update(id: Long, newName: String): Future[Int] =
-    db.run(users.filter(_.id === id).map(_.name).update(newName))
+    //db.run(users.filter(_.id === id).map(_.name).update(newName))
+    db.run(users.filter(x => x.id === id).map(y => y.name).update(newName))
 
   def delete(id: Long): Future[Int] =
     db.run(users.filter(_.id === id).delete)
+  
 }

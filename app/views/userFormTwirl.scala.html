@@ -1,8 +1,0 @@
-@(userForm: Form[UserData],postUrl:Call)(implicit request: MessagesRequestHeader)
-
-@helper.form(action = postUrl) {
-  @helper.CSRF.formField
-  @helper.inputText(userForm("name"))
-  @helper.inputText(userForm("age"))
-  <button type="submit">Submit</button>
-}

@@ -9,6 +9,8 @@ case class User(id: Long, name: String)
 object User{
   implicit val formatter: Format[User] = Json.format[User]
 }
+
+// FRM mapping
 class UsersTable(tag: Tag) extends Table[User](tag, "users") {
   def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
   def name = column[String]("name")
@@ -18,3 +20,12 @@ class UsersTable(tag: Tag) extends Table[User](tag, "users") {
 
 }
 
+
+/* 
+* Create DB in psql
+* CREATE DATABASE store
+* CREATE TABLE users (
+*    id SERIAL PRIMARY KEY,
+*    name VARCHAR NOT NULL
+*);
+*/

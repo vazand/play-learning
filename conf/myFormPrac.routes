@@ -1,6 +1,6 @@
-GET      /     controllers.MyFormController.showForm()
-+nocsrf
-POST    /submit     controllers.MyFormController.userPost()
+# GET      /     controllers.MyFormController.showForm()
+# +nocsrf
+# POST    /submit     controllers.MyFormController.userPost()
 
 
 

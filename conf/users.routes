@@ -1,5 +1,9 @@
 GET     /   controllers.UserController.listUsers
+# Read one
 GET     /:id          controllers.UserController.getUser(id: Long)
+#Create
 POST    /            controllers.UserController.createUser
+# Update
 PUT     /:id          controllers.UserController.updateUser(id: Long)
+# Delete
 DELETE  /:id          controllers.UserController.deleteUser(id: Long)
