@@ -13,13 +13,13 @@ GET     /user/:username     controllers.RoutesPractices.users(username:String)
 #query parameter
 GET     /userInfo/:username     controllers.RoutesPractices.user(username:String,age:Int)
 
-
-# To tell the routes file, use different routes file with specific prefix 
+# To tell the routes file, use different routes file with specific prefix
 ->      /api/users              users.Routes
 ->      /api/admin              admin.Routes
 ->      /confs                  confLearn.Routes
 # ->      /form                   myFormPrac.Routes
 ->      /store                  actionPrac.Routes
+->      /di                     di.Routes
 ->      /assets                 myAssets.Routes
 
 
