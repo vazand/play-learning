@@ -12,3 +12,6 @@ target
 /.bloop
 /PowerShell 7.5.0
 /.g8
+/project/.bloop
+/project/project
+/project/metals.sbt
