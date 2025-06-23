@@ -1,0 +1,2 @@
+GET     /       controllers.WSController.ws()
+GET     /chat   controllers.WSController.chatSocket

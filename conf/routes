@@ -20,6 +20,7 @@ GET     /userInfo/:username     controllers.RoutesPractices.user(username:String
 # ->      /form                   myFormPrac.Routes
 ->      /store                  actionPrac.Routes
 ->      /di                     di.Routes
+->      /ws                     ws.Routes
 ->      /assets                 myAssets.Routes
 
 
