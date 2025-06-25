@@ -12,7 +12,6 @@ class LoggingFilter @Inject()(implicit val mat: Materializer, ec: ExecutionConte
   private val logger = Logger(this.getClass)
   private val startTime = System.currentTimeMillis()
 
-  logger.info(s"logger name ${logger.underlyingLogger.getClass}")
   override def apply(next: RequestHeader => Future[Result])(request: RequestHeader): Future[Result] = {
     next(request).map {
       result => {
